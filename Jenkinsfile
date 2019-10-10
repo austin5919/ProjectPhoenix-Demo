@@ -5,9 +5,6 @@ node {
     stage('Code Style') {
         echo 'WIP Code Style Stage'
     }
-    stage('Code Style') {
-        echo 'WIP Code Style Stage'
-    }
     stage('Build') {
         echo 'WIP Build Stage'
     }
