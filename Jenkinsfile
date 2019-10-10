@@ -9,6 +9,7 @@ node {
     }
     stage('Build') {
         echo 'WIP Build Stage'
+        sh 'clean install'
     }
     stage('Test') {
         echo 'WIP Test Stage'
