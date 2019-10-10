@@ -23,13 +23,14 @@ public class Users {
   private String state;
   private boolean isAdmin;
   private String email;
+
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
   private Timestamp joinDate;
+
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
   private Timestamp lastOnline;
 
   public Users() {
     joinDate = new Timestamp(new Date().getTime());
   }
-
 }
