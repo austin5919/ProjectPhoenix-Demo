@@ -4,6 +4,8 @@ node {
     }
     stage('Code Style') {
         echo 'WIP Code Style Stage'
+        def response = sh 'mvn spotless:check'
+        echo 'Code Style Response ${response}'
     }
     stage('Build') {
         echo 'WIP Build Stage'
