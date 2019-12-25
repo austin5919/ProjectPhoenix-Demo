@@ -19,7 +19,7 @@ public class Users {
   private String username;
   private String firstName;
   private String lastName;
-        private String phoneNumber;
+  private String phoneNumber;
   private String state;
   private boolean isAdmin;
   private String email;
