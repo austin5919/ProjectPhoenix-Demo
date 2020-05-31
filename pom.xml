@@ -23,6 +23,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <version.h2>1.4.199</version.h2>
     <version.lombok>1.18.8</version.lombok>
+    <version.pmd>3.13.0</version.pmd>
     <version.spotless>1.24.1</version.spotless>
     <version.swagger>2.9.2</version.swagger>
   </properties>
@@ -92,6 +93,11 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${version.pmd}</version>
       </plugin>
     </plugins>
   </build>
