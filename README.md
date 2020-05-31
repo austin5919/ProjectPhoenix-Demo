@@ -1,2 +1,2 @@
 # ProjectPhoenix-Demo
-CI/CD Test02
+A Spring Boot application demo using H2Database, Swagger UI, Lombok, Spotless, and PMD.
