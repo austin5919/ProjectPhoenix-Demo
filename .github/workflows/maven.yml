@@ -23,5 +23,7 @@ jobs:
           java-version: 1.8
       - name: Spotless code style check
         run: mvn spotless:check
+      - name: PMD Static Analysis
+        run: mvn pmd:check
       - name: Build with Maven
         run: mvn -B package
