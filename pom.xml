@@ -10,20 +10,40 @@
   <name>project-phoenix-demo</name>
   <description>Demo project for Spring Boot</description>
 
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.1.RELEASE</version>
+    <relativePath/>
+  </parent>
+
   <properties>
     <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <version.h2>1.4.199</version.h2>
     <version.lombok>1.18.8</version.lombok>
     <version.spotless>1.24.1</version.spotless>
-    <version.springboot>2.1.6.RELEASE</version.springboot>
+    <version.swagger>2.9.2</version.swagger>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>${version.h2}</version>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>${version.swagger}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>${version.swagger}</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -34,18 +54,15 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
-      <version>${version.springboot}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
-      <version>${version.springboot}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
-      <version>${version.springboot}</version>
     </dependency>
   </dependencies>
 
@@ -55,14 +72,14 @@
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
         <version>${version.spotless}</version>
-<!--        <executions>-->
-<!--          <execution>-->
-<!--            <phase>verify</phase>-->
-<!--            <goals>-->
-<!--              <goal>check</goal>-->
-<!--            </goals>-->
-<!--          </execution>-->
-<!--        </executions>-->
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
         <configuration>
           <java>
             <googleJavaFormat>
@@ -75,7 +92,6 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${version.springboot}</version>
       </plugin>
     </plugins>
   </build>
