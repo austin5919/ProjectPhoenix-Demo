@@ -14,6 +14,8 @@ public class UsersController {
 
   @Autowired private UserJpaRepository userJpaRepository;
 
+  private String testBreakCodeCheck; // This should make workflow fail the build
+
   @GetMapping("/all")
   public List<Users> findAll() {
     return userJpaRepository.findAll();
