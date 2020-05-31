@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>me.austin5919</groupId>
+  <groupId>github.austin5919</groupId>
   <artifactId>project-phoenix-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>project-phoenix-demo</name>
-  <description>Demo project for Spring Boot</description>
+  <description>Knowledge base demonstration using Spring</description>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
